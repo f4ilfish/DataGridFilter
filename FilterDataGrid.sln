@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32519.111
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterDataGrid.Net", "FilterDataGrid.Net\FilterDataGrid.Net.csproj", "{B9D0F3B2-3921-4F75-A224-5DC84EE7D859}"
 EndProject
@@ -13,9 +13,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedModelView", "SharedMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp.NET.Framework", "DemoApp.NET.Framework\DemoApp.NET.Framework.csproj", "{8532DD47-CB02-4CD1-9055-D70CC7806667}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApp.Net7.0", "DemoApp.Net7.0\DemoApp.Net7.0.csproj", "{08F847A8-56C6-4C9F-A635-454B559684E4}"
-EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SharedModelView\SharedModelView.projitems*{03366d93-4240-4880-a847-2326a7c324c9}*SharedItemsImports = 5
+		SharedModelView\SharedModelView.projitems*{8532dd47-cb02-4cd1-9055-d70cc7806667}*SharedItemsImports = 4
+		SharedModelView\SharedModelView.projitems*{8650a7d3-33d7-4d37-b040-e6378e1ddc33}*SharedItemsImports = 5
+		SharedModelView\SharedModelView.projitems*{e2e134a8-314f-43b4-bcc6-206d2bb5705c}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -37,22 +41,11 @@ Global
 		{8532DD47-CB02-4CD1-9055-D70CC7806667}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8532DD47-CB02-4CD1-9055-D70CC7806667}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8532DD47-CB02-4CD1-9055-D70CC7806667}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08F847A8-56C6-4C9F-A635-454B559684E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08F847A8-56C6-4C9F-A635-454B559684E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08F847A8-56C6-4C9F-A635-454B559684E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08F847A8-56C6-4C9F-A635-454B559684E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6EC7BC8-FC6A-44D2-A84C-CCD48B53A6E5}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		SharedModelView\SharedModelView.projitems*{03366d93-4240-4880-a847-2326a7c324c9}*SharedItemsImports = 5
-		SharedModelView\SharedModelView.projitems*{08f847a8-56c6-4c9f-a635-454b559684e4}*SharedItemsImports = 5
-		SharedModelView\SharedModelView.projitems*{8532dd47-cb02-4cd1-9055-d70cc7806667}*SharedItemsImports = 4
-		SharedModelView\SharedModelView.projitems*{8650a7d3-33d7-4d37-b040-e6378e1ddc33}*SharedItemsImports = 5
-		SharedModelView\SharedModelView.projitems*{e2e134a8-314f-43b4-bcc6-206d2bb5705c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

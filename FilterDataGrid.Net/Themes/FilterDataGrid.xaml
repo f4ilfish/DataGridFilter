@@ -12,12 +12,12 @@
     <control:StringFormatConverter x:Key="StringFormatConverter" />
     <control:SolidBrushToColorConverter x:Key="SolidBrushToColorConverter" />
 
-    <!--  INITIAL POPUP SIZE  -->
+    <!--  INITIAL POPUP SIZE  (Размеры всплывающего меню)--> 
     <sys:Double x:Key="PopupHeight">420</sys:Double>
-    <sys:Double x:Key="PopupWidth">262</sys:Double>
+    <sys:Double x:Key="PopupWidth">420</sys:Double>
     <sys:Boolean x:Key="StayOpen">False</sys:Boolean>
 
-    <!--  PLACEHOLDER SEARCH BOX  -->
+    <!--  PLACEHOLDER SEARCH BOX  (Поле поиска)-->
     <Style x:Key="PlaceHolder" TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -33,7 +33,7 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <!--  Col:0 SEARCH TEXTBOX  -->
+                        <!--  Col:0 SEARCH TEXTBOX  (Поле поиска)-->
 
                         <TextBox
                             x:Name="TextSource"
@@ -140,7 +140,7 @@
                             Margin="2,0,2,0"
                             Background="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}, Mode=FindAncestor, AncestorLevel=1}, Path=BorderBrush}" />
 
-                        <!--  Col:3  TOGGLE BUTTON  -->
+                        <!--  Col:3  TOGGLE BUTTON  (Переключатель типа фильтра)-->
                         <ToggleButton
                             Name="SearchToggleButton"
                             Grid.Column="3"
@@ -496,12 +496,13 @@
                         MinWidth="{StaticResource PopupWidth}"
                         MinHeight="{StaticResource PopupHeight}"
                         ShowGridLines="False"
-                        ZIndex="1">
+                        ZIndex="1"
+                        Margin="8,0,4,0">
 
-                        <Grid.ColumnDefinitions>
+                        <!--<Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" MinWidth="32" />
                             <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                        </Grid.ColumnDefinitions>-->
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -514,7 +515,7 @@
                         <Button
                             x:Name="ClearFilterBnt"
                             Grid.Row="0"
-                            Grid.Column="0"
+                            Grid.Column="1"
                             Grid.ColumnSpan="2"
                             Margin="2,10,2,2"
                             Padding="4"
@@ -607,7 +608,7 @@
                             <!--  Row 2: SEARCH BOX  -->
                             <Border
                                 Grid.Row="1"
-                                Margin="0,4,4,2"
+                                Margin="0,4,4,4"
                                 Padding="0,2"
                                 VerticalAlignment="Top"
                                 Background="Transparent"
@@ -622,15 +623,14 @@
                                     <TextBox
                                         x:Name="SearchBox"
                                         Grid.Column="0"
-                                        Margin="0"
-                                        Padding="2,0,0,0"
+                                        Margin="4,2,2,2"
+                                        Padding="0,4,0,4"
                                         HorizontalAlignment="Stretch"
                                         VerticalContentAlignment="Center"
                                         AcceptsReturn="False"
                                         DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type control:FilterDataGrid}}}"
                                         Focusable="True"
                                         FontSize="13"
-                                        MaxLength="20"
                                         Style="{StaticResource PlaceHolder}"
                                         TabIndex="1"
                                         Tag="{Binding Translate.Contains}">
@@ -653,13 +653,13 @@
                         </Grid>
 
                         <!--  Row 2, Col 0 : ICON (filter is active)  -->
-                        <Path
+                        <!--<Path
                             x:Name="PathIsFiltered"
                             Grid.Row="2"
                             Grid.Column="0"
                             Width="19"
                             Height="20"
-                            Margin="0,5,0,0"
+                            Margin="100"
                             VerticalAlignment="Top"
                             Panel.ZIndex="0"
                             Data="{DynamicResource FilterChecked}"
@@ -677,7 +677,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Path.Style>
-                        </Path>
+                        </Path>-->
 
                         <!--  Row 2, Col 1 : (LISTBOX/TREEVIEW)  -->
                         <Grid
