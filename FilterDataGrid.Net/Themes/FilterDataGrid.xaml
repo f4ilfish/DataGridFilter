@@ -395,7 +395,7 @@
         </Setter>
     </Style>
 
-    <!--  DATAGRID COLUMN HEADER STYLE  -->
+    <!--  DATAGRID COLUMN HEADER STYLE (Стиль заголовка)  -->
     <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="DataGridColumnHeader">
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     </Style>
@@ -453,14 +453,15 @@
                 <TextBlock Grid.Column="0" Text="{Binding}" />
 
                 <!--
+                    (Кнопка фильтра в заголовке столбца)
                     FILTER BUTTON
                     FilterState.IsFiltered => Attached Property : see FilterHelpers.cs
                 -->
                 <Button
                     Name="FilterButton"
                     Grid.Column="1"
-                    Width="19"
-                    Height="19"
+                    Width="16"
+                    Height="16"
                     control:FilterState.IsFiltered="False"
                     Command="{x:Static control:FilterDataGrid.ShowFilter}"
                     Cursor="Hand">
